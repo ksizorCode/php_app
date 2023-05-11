@@ -1,0 +1,262 @@
++@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100&display=swap');
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --ff: 'Josefin Sans', sans-serif;
+    --ff1: sans-serif;
+    --m: 20px;
+    --maw: 960px;
+    --c: coral;
+    --l: white;
+    --d: black;
+}
+
+body {
+    font-family: var(--ff1);
+    max-width: var(--maw);
+    margin: var(--m) auto;
+    padding: var(--m);
+    background: var(--c);
+}
+
+header, main, footer {
+    padding: var(--m);
+    background-color: var(--l);
+    border-radius: calc(var(--m) *1.6);
+    margin: var(--m);
+}
+
+a {
+    color: var(--c);
+    text-decoration: none;
+}
+
+p a:hover {
+    text-decoration: underline;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--ff);
+    margin:0 0 calc(var(--m)*2) 0;
+}
+
+
+header ul, footer ul {
+    list-style: none;
+    padding-left: 0;
+    gap: var(--m);
+    display: flex;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+}
+
+footer ul {
+    justify-content: center;
+}
+
+main header {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Tabla */
+table {
+    font-size: 0.8em;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table img {
+    max-width: 20px;
+    transition: 0.3s;
+    z-index: 1;
+}
+
+table td {
+    padding: 2px 4px;
+}
+table thead th:nth-child(1),
+table thead th:nth-child(3),
+table td:nth-child(1),
+table td:nth-child(3) {
+    text-align: right !important;
+}
+
+table th{ text-align:left;}
+
+tr:nth-child(even) {
+    background-color: #EEE;
+}
+
+tr:hover {
+    background: var(--c);
+}
+
+tr:hover td img {
+    scale: 4;
+    z-index: 2;
+    filter: drop-shadow(0 0 2px var(--c));
+}
+
+tr:hover a {
+    color: var(--l);
+}
+
+
+
+
+table thead tr th span {
+    visibility: hidden;
+}
+
+table thead tr th:hover span {
+    visibility: visible;
+    color: var(--l);
+    padding-right: 4px;
+}
+
+a button, .btn, button, input[type="submit"]{
+    padding: calc(var(--m)/2) var(--m);
+    border-radius: var(--m);
+    background: none;
+    color: var(--c);
+    text-align: center;
+    display: inline-block;
+    margin: calc(var(--m)/3) 0;
+    border: 1px solid var(--c);
+    text-decoration: none !important;
+    transition: 0.3s;
+}
+
+a:hover button, .btn:hover, button:hover,
+input[type="submit"]:hover,
+input.active, a.active, .btn.active, button.active
+{
+    background-color: var(--c);
+    color: var(--l);
+}
+
+.botonera {
+    display: flex;
+    gap: 10px;
+    justify-content: end;
+}
+
+i {
+    padding-right: 10px;
+}
+
+main .ficha {
+    display: flex;
+    gap: 20px;
+    border-radius: var(--m);
+    border: solid 1px var(--c);
+    padding: var(--m);
+    box-shadow: 0 0 20px var(--c);
+    margin-bottom: var(--m);
+    animation: anim1 1s;
+    position: relative;
+    box-sizing: border-box;
+    justify-content: space-between;
+}
+
+main .ficha .foto {
+    width: 200px !important;
+}
+
+h1 span, p span {
+    color: var(--c);
+}
+
+@keyframes anim1 {
+    0% {
+        opacity: 0;
+        top: 40px;
+    }
+
+    100% {
+        opacity: 1;
+        top: 0;
+    }
+}
+
+input[type="text"],
+input[type="date" i] {
+    width: 100%;
+    padding: 6px 20px;
+    border-radius: 20px;
+    border: solid 1px grey;
+    margin: 0 0 8px 0;
+    box-sizing: border-box;
+}
+
+
+
+
+[onclick] {
+    cursor: pointer;
+}
+
+.grid {
+    display:grid;
+    gap: 10px;
+    grid-template-columns: repeat(2, 1fr 4fr);
+    margin-block:20px;
+}
+
+form input[type="submit"]{
+    width:100%;
+}
+
+
+.grid-cursos{
+    display:flex;
+    flex-wrap:wrap;
+    grid-template-columns:repeat(4, 1fr);
+    gap:10px;
+    
+}
+
+.grid-cursos div.ficha{
+    flex-direction:column;
+    max-width:18%;
+    overflow: hidden;
+    padding:16px;
+}
+
+.grid-cursos .ficha .foto{
+    width: calc(100% + 40px) !important;
+    margin-left:-20px;
+    margin-right:-20px;
+    margin-top: -20px;
+}
+
+.grid-cursos .ficha h2,
+.grid-cursos .ficha h3{
+   font-size: 13px;
+    margin-bottom:8px;
+}
+.grid-cursos .ficha p{
+   font-size: 12px;
+    margin:0;
+}
+
+.grid-cursos .ficha a{
+    max-width:100%;
+    width:80px;
+    margin:8px auto 0 auto;
+    padding:4px 20px;;
+   
+}

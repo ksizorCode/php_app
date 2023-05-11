@@ -1,0 +1,66 @@
+:root {
+    --c: teal;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    bottom: 0;
+}
+
+html {
+    font-family: sans-serif;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+input[type="submit"], button, a {
+    padding: 3px 4px;
+    border: solid 1px var(--c);
+     display: inline-flex;
+    text-decoration: none;
+    color: var(--c);
+    border-radius: 8px;
+    min-width: 30px;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    margin: 4px;
+    appearance: auto;
+    user-select: none;
+    white-space: pre;
+}
+
+input[type="submit"]:hover, button:hover, a:hover {
+    background-color: var(--c);
+    color: white;
+}
+
+table {
+    width: 100%;
+    margin:20px 0
+}
+
+table tr:hover {
+    background-color: #EEE;
+}
+
+table th{ text-align:left;}
+
+
+table td:first-child,
+table td:nth-child(2n+1){
+    color:var(--c);
+}
+
+h1{
+    color:var(--c);
+    margin-bottom:20px;
+}
+
+form input,
+form label{
+    margin-bottom:8px;
+}

@@ -1,0 +1,37 @@
+:root{
+    --c:tan;
+    --l:white;
+    --d:black;
+    --d1:grey;
+    --d2:lightgray;
+
+
+
+    --maw:960px;
+
+    --m:20px;
+    --bdrd:20px;
+
+    --ff:sans-serif;
+}
+
+
+body{
+    background-color: var(--c);
+    font-family: var(--ff);
+    max-width: var(--maw);
+    margin:20px auto;
+    padding: 20px;
+}
+
+
+
+
+section, header, main, footer, pre{
+    border-radius:var(--bdrd);
+    background-color:var(--l);
+    padding:var(--m);
+    margin-bottom:calc(var(--m)/2);
+}
+
+pre{ border:solid 1px var(--d2);}
